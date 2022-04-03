@@ -1,0 +1,11 @@
+:root {
+    --opacity-home: 0.8;
+
+    /* home page heading variables */
+    --homePage-heading: 5rem;
+    --homePage-heading-mv: 3rem;
+
+    /* home page description variables */
+    --homePage-description: 1.5rem;
+    --homePage-description-mv: 1.2rem;
+}
