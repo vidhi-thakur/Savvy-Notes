@@ -1,0 +1,29 @@
+.nav-title a {
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.nav-title {
+  padding: var(--default-spacing);
+}
+
+.nav-notes {
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .nav-notes {
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    display: inline-block;
+  }
+}
