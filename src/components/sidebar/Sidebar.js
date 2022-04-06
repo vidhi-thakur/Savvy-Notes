@@ -5,22 +5,27 @@ import './Sidebar.css'
 import { sidebarMenu } from 'static/sidebar/sidebarMenu'
 import { NavLink } from 'react-router-dom'
 
-function Sidebar() {
+function Sidebar({ children }) {
   return (
-    <aside className='sidebar'>
-      {sidebarMenu.map(menu => <MenuItem
-        key={menu.name}
-        name={menu.name}
-        icon={menu.icon}
-        link={menu.link}
-      />)}
-    </aside>
+    <div className='sidebar-HOC'>
+      <aside className='sidebar'>
+        {sidebarMenu.map(menu => <MenuItem
+          key={menu.name}
+          name={menu.name}
+          icon={menu.icon}
+          link={menu.link}
+        />)}
+      </aside>
+      <div className='sidebar-RHS'>
+        {children}
+      </div>
+    </div>
   )
 }
 
 const MenuItem = ({ name, icon, link }) => {
   const getActiveStyle = ({ isAvtive }) => ({
-    fontWeight: isAvtive ? 500 : 400
+    fontWeight: isAvtive ? 700 : 400
   })
   return (
     <div className='sidebar-menuItem'>

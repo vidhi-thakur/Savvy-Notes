@@ -1,8 +1,10 @@
 .sidebar {
-    padding-top: var(--xxl-spacing);
-    padding-left: var(--default-spacing);
-    max-width: min(18.75rem, 70vw);
+    padding: var(--xxl-spacing) var(--default-spacing) 0;
+    width: min(18.75rem, 70vw);
     min-height: 100vh;
+    /* position: fixed; */
+    background-color: var(--basic-bg);
+    z-index: -1;
 }
 
 .sidebar-menuItem div {
@@ -16,4 +18,15 @@
     margin-bottom: 4;
     cursor: pointer;
     line-height: 0.9;
+    border-bottom: 1px solid var(--secondary-color-light-shade2);
+}
+
+.sidebar-HOC {
+    display: flex;
+}
+
+.sidebar-RHS {
+    flex: 1;
+    min-height: 100vh;
+    padding: var(--xxl-spacing) var(--default-spacing) var(--default-spacing);
 }
