@@ -4,8 +4,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 //local components
-import Home from './pages/home/Home';
-import Navbar from './components/navbar/Navbar';
+import { Dashboard, Home } from 'pages/pagesGlobalExport';
+import { Navbar } from 'components/componentExport';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </div>
   );
