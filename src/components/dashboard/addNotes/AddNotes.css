@@ -1,0 +1,24 @@
+.addNotes {
+  width: min(95%, 55rem);
+  background-color: var(--basic-bg);
+  border-radius: var(--default-border);
+  padding: var(--default-spacing);
+}
+
+.addNotes-title {
+  opacity: var(--opacity-default);
+}
+
+.addNotes-header {
+  padding-bottom: var(--default-spacing);
+  border-bottom: var(--default-border);
+}
+
+.addNotes-form {
+  padding-top: var(--default-spacing);
+}
+
+.addNotes-input {
+  width: 100%;
+  border-radius: var(--default-border);
+}

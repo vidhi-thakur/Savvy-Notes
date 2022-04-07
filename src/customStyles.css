@@ -22,4 +22,7 @@
 
     /* spacing */
     --xxl-spacing: 5rem;
+
+    /* border config */
+    --default-border: 1px solid var(--secondary-color-light-shade2);
 }
