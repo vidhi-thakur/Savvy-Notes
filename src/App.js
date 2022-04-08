@@ -2,10 +2,10 @@ import './App.css';
 
 // router
 import { Route, Routes } from 'react-router-dom'
+import { Navbar } from 'components/componentExport';
+import { Dashboard, Home } from 'pages/pagesGlobalExport';
 
 //local components
-import { Dashboard, Home } from 'pages/pagesGlobalExport';
-import { Navbar } from 'components/componentExport';
 
 function App() {
   return (

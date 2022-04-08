@@ -11,14 +11,46 @@
 
 .addNotes-header {
   padding-bottom: var(--default-spacing);
-  border-bottom: var(--default-border);
+  border-bottom: var(--basic-border);
 }
 
 .addNotes-form {
+  margin-top: var(--default-spacing);
+  border-bottom: var(--basic-border);
+}
+
+.addNotes-input, .addNotes-desc {
+  width: 100%;
+}
+
+.addNotes-desc {
+  margin: var(--default-spacing) 0;
+}
+
+.addNotes-btn {
+  font-size: unset;
+  margin: 0;
+}
+
+.addNotes-bottomStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: var(--default-spacing);
 }
 
-.addNotes-input {
-  width: 100%;
-  border-radius: var(--default-border);
+.addNotes-iconBox {
+  display: flex;
+  align-items: center;
+  gap: var(--default-spacing);
+  font-size: var(--md-font-s);
+}
+
+.addNotes-icon {
+  opacity: var(--opacity-default);
+  cursor: pointer;
+}
+
+.addNotes-icon:hover {
+  color: var(--primary-color)
 }
