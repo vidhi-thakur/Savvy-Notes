@@ -9,11 +9,11 @@ function Sidebar({ children }) {
   return (
     <div className='sidebar-HOC'>
       <aside className='sidebar'>
-        {sidebarMenu.map(menu => <MenuItem
-          key={menu.name}
-          name={menu.name}
-          icon={menu.icon}
-          link={menu.link}
+        {sidebarMenu.map(({name, icon, link}) => <MenuItem
+          key={name}
+          name={name}
+          icon={icon}
+          link={link}
         />)}
       </aside>
       <div className='sidebar-RHS'>
