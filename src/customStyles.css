@@ -1,5 +1,5 @@
 :root {
-    --opacity-home: 0.8;
+    --opacity-default: 0.9;
 
     /* home page heading variables */
     --homePage-heading: 5rem;
@@ -8,4 +8,21 @@
     /* home page description variables */
     --homePage-description: 1.5rem;
     --homePage-description-mv: 1.2rem;
+
+    /* font weights */
+    --font-w-01: 400;
+    --font-w-02: 500;
+    --font-w-03: 700;
+
+    /* font size */
+    --default-font-s: 1rem;
+    --md-font-s: 1.25rem;
+    --lg-font-s: 2rem;
+    --sm-font-s: 0.5rem;
+
+    /* spacing */
+    --xxl-spacing: 5rem;
+
+    /* border config */
+    --default-border: 1px solid var(--secondary-color-light-shade2);
 }

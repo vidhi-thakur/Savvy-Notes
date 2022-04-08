@@ -4,13 +4,16 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 //local components
-import Home from './pages/home/Home';
+import { Dashboard, Home } from 'pages/pagesGlobalExport';
+import { Navbar } from 'components/componentExport';
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </div>
   );
