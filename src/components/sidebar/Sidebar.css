@@ -17,7 +17,7 @@
     margin-bottom: 4;
     cursor: pointer;
     line-height: 0.9;
-    border-bottom: var(--basic-border);
+    border-bottom: var(--default-border);
 }
 
 .sidebar-HOC {

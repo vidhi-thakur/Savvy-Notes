@@ -6,7 +6,6 @@ import { HiArrowNarrowRight } from 'react-icons/hi';
 
 // css
 import './Home.css';
-import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -22,9 +21,7 @@ function Home() {
                 <header className='home-header'>
                     <h1 className='home-heading'>Notes savvy</h1>
                     <p className='home-description'>Manage your daily tasks and workflow in a modern way and boost your efficiency without any efforts.</p>
-                    <Link to="/dashboard">
-                        <button className='btn btn-primary-contained btn-home'>get started <HiArrowNarrowRight /></button>
-                    </Link>
+                    <button className='btn btn-primary-contained btn-home'>get started <HiArrowNarrowRight /></button>
                 </header>
             </aside>
         </div>
