@@ -9,9 +9,6 @@ function Dashboard() {
             <div className='dashboard-mainContent'>
                 <AddNotes />
                 <DashboardCard />
-                <DashboardCard />
-                <DashboardCard />
-                <DashboardCard />
             </div>
         </div>
     )
