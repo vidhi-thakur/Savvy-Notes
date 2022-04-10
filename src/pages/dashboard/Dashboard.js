@@ -1,4 +1,3 @@
-import { Sidebar } from 'components/componentExport'
 import { AddNotes, DashboardCard } from 'components/dashboard/dashboardExports'
 import React from 'react'
 import './Dashboard.css'

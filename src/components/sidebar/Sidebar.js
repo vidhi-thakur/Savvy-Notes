@@ -3,7 +3,7 @@ import React from 'react'
 import './Sidebar.css'
 // static file
 import { sidebarMenu } from 'static/sidebar/sidebarMenu'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Sidebar({ children, isSidearVisible }) {
   return (
