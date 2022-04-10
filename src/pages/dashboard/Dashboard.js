@@ -6,15 +6,13 @@ import './Dashboard.css'
 function Dashboard() {
     return (
         <div>
-            <Sidebar>
-                <div className='dashboard-mainContent'>
-                    <AddNotes />
-                    <DashboardCard />
-                    <DashboardCard />
-                    <DashboardCard />
-                    <DashboardCard />
-                </div>
-            </Sidebar>
+            <div className='dashboard-mainContent'>
+                <AddNotes />
+                <DashboardCard />
+                <DashboardCard />
+                <DashboardCard />
+                <DashboardCard />
+            </div>
         </div>
     )
 }

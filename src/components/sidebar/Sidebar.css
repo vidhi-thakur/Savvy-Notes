@@ -1,31 +1,42 @@
 .sidebar {
-    padding: var(--xxl-spacing) var(--default-spacing) 0;
-    width: min(18.75rem, 70vw);
-    min-height: 100vh;
-    background-color: var(--basic-bg);
-    z-index: -1;
+  padding: var(--xxl-spacing) var(--default-spacing) 0;
+  width: min(18.75rem, 70vw);
+  min-height: 100vh;
+  background-color: var(--basic-bg);
+  z-index: -1;
 }
 
-.sidebar-menuItem div {
-    display: flex;
-    align-items: center;
-    gap: var(--sm-spacing);
-    text-transform: capitalize;
-    opacity: var(--opacity-default);
-    font-size: var(--md-font-s);
-    padding: var(--default-spacing);
-    margin-bottom: 4;
-    cursor: pointer;
-    line-height: 0.9;
-    border-bottom: var(--default-border);
+.sidebar-inactive {
+  display: none;
+}
+
+.sidebar-active {
+  display: inline-block;
+  position: fixed;
+  z-index: 5;
+  box-shadow: var(--default-shadow);
+}
+
+.sidebar-menuItem > a > div {
+  display: flex;
+  align-items: center;
+  gap: var(--sm-spacing);
+  text-transform: capitalize;
+  opacity: var(--opacity-default);
+  font-size: var(--md-font-s);
+  padding: var(--default-spacing);
+  margin-bottom: 4;
+  cursor: pointer;
+  line-height: 0.9;
+  border-bottom: var(--default-border);
 }
 
 .sidebar-HOC {
-    display: flex;
+  display: flex;
 }
 
 .sidebar-RHS {
-    flex: 1;
-    min-height: 100vh;
-    padding: var(--xxl-spacing) var(--default-spacing) var(--default-spacing);
+  flex: 1;
+  min-height: 100vh;
+  padding: var(--xxl-spacing) var(--default-spacing) var(--default-spacing);
 }
