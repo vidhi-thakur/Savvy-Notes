@@ -5,10 +5,13 @@ import './Navbar.css'
 import { TiThMenu } from 'react-icons/ti'
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+function Navbar(props) {
+    const updateSidebarState = () => {
+        props.setIsSidearVisible(val => !val)
+    }
     return (
         <nav className='nav nav-notes'>
-            <div className='nav-menu'>
+            <div onClick={updateSidebarState} className='nav-menu'>
                 <TiThMenu size={24} />
             </div>
             <h1 className='nav-title'>

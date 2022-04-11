@@ -5,11 +5,11 @@ import './Sidebar.css'
 import { sidebarMenu } from 'static/sidebar/sidebarMenu'
 import { NavLink } from 'react-router-dom'
 
-function Sidebar({ children }) {
+function Sidebar({ children, isSidearVisible }) {
   return (
-    <div className='sidebar-HOC'>
-      <aside className='sidebar'>
-        {sidebarMenu.map(({name, icon, link}) => <MenuItem
+    <div className="sidebar-HOC">
+      <aside className={`sidebar ${!isSidearVisible ? 'sidebar-inactive' : 'sidebar-active'}`}>
+        {sidebarMenu.map(({ name, icon, link }) => <MenuItem
           key={name}
           name={name}
           icon={icon}

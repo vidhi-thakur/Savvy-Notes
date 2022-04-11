@@ -12,11 +12,13 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .nav-menu {
   display: none;
   opacity: var(--opacity-default);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1050px) {
