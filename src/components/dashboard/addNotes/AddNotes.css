@@ -39,6 +39,9 @@
 
 .addNotes-bottomStrip {
   padding-top: var(--default-spacing);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .addNotes-bottomIcons {
