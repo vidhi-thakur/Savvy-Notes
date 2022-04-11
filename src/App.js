@@ -9,7 +9,7 @@ import { Dashboard, Home } from 'pages/pagesGlobalExport';
 import { Navbar, Sidebar } from 'components/componentExport';
 
 function App() {
-  const [isSidearVisible, setIsSidearVisible] = useState(true)
+  const [isSidearVisible, setIsSidearVisible] = useState(false)
   return (
     <div className="App">
       <Navbar setIsSidearVisible={setIsSidearVisible} />
