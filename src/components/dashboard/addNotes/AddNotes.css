@@ -50,3 +50,8 @@
   align-items: center;
   gap: var(--default-spacing);
 }
+
+.addNotes-bottomIcons > svg:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
