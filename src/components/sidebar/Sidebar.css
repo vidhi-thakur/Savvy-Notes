@@ -6,15 +6,17 @@
   z-index: -1;
 }
 
-.sidebar-inactive {
-  display: none;
-}
+@media screen and (max-width: 1050px) {
+  .sidebar-inactive {
+    display: none;
+  }
 
-.sidebar-active {
-  display: inline-block;
-  position: fixed;
-  z-index: 5;
-  box-shadow: var(--default-shadow);
+  .sidebar-active {
+    display: inline-block;
+    position: fixed;
+    z-index: 5;
+    box-shadow: var(--default-shadow);
+  }
 }
 
 .sidebar-menuItem > a > div {
@@ -28,7 +30,7 @@
   margin-bottom: 4;
   cursor: pointer;
   line-height: 0.9;
-  border-bottom: var(--default-border);
+  border-bottom: var(--basic-border);
 }
 
 .sidebar-HOC {
