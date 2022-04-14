@@ -5,20 +5,56 @@
   padding: var(--default-spacing);
 }
 
+.input {
+  border-radius: var(--default-border);
+}
+
 .addNotes-title {
   opacity: var(--opacity-default);
 }
 
 .addNotes-header {
   padding-bottom: var(--default-spacing);
-  border-bottom: var(--default-border);
+  border-bottom: var(--basic-border);
 }
 
 .addNotes-form {
-  padding-top: var(--default-spacing);
+  padding: var(--default-spacing) 0;
+  border-bottom: var(--basic-border);
 }
 
 .addNotes-input {
   width: 100%;
   border-radius: var(--default-border);
+}
+
+.addNotes-description {
+  width: 100%;
+  margin-top: var(--default-spacing);
+}
+
+.addNotes-btn {
+  margin: 0;
+}
+
+.addNotes-bottomStrip {
+  padding-top: var(--default-spacing);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addNotes-bottomIcons {
+  font-size: 1.5rem;
+}
+
+.addNotes-bottomIcons {
+  display: flex;
+  align-items: center;
+  gap: var(--default-spacing);
+}
+
+.addNotes-bottomIcons > svg:hover {
+  color: var(--primary-color);
+  cursor: pointer;
 }

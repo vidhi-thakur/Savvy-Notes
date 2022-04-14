@@ -20,17 +20,17 @@
 }
 
 .sidebar-menuItem > a > div {
-  display: flex;
-  align-items: center;
-  gap: var(--sm-spacing);
-  text-transform: capitalize;
-  opacity: var(--opacity-default);
-  font-size: var(--md-font-s);
-  padding: var(--default-spacing);
-  margin-bottom: 4;
-  cursor: pointer;
-  line-height: 0.9;
-  border-bottom: var(--basic-border);
+    display: flex;
+    align-items: center;
+    gap: var(--sm-spacing);
+    text-transform: capitalize;
+    opacity: var(--opacity-default);
+    font-size: var(--md-font-s);
+    padding: var(--default-spacing);
+    margin-bottom: 4;
+    cursor: pointer;
+    line-height: 0.9;
+    border-bottom: var(--basic-border);
 }
 
 .sidebar-HOC {
