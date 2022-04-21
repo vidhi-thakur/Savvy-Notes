@@ -12,6 +12,9 @@ function DashboardCard() {
         </h3>
         <VscPinned />
       </header>
+      <main className='ellipsis'>
+        body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card
+      </main>
 
     </div>
   )
