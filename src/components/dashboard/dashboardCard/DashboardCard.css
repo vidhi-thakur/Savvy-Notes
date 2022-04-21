@@ -1,0 +1,23 @@
+.dashboardCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-spacing);
+    width: var(--dashboard-card-width);
+    height: auto;
+    background-color: var(--basic-bg);
+    padding: var(--default-spacing);
+    border-radius: var(--default-border);
+    border: var(--basic-border);
+    opacity: var(--opacity-default);
+}
+
+.dashboardCard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboardCard-header > svg {
+  font-size: var(--md-font-s);
+  cursor: pointer;
+}

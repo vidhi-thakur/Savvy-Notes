@@ -16,7 +16,7 @@
 
     /* font size */
     --default-font-s: 1rem;
-    --md-font-s: 1.25rem;
+    --md-font-s: 1.5rem;
     --lg-font-s: 2rem;
     --sm-font-s: 0.5rem;
 
@@ -25,4 +25,7 @@
 
     /* border config */
     --basic-border: 1px solid var(--secondary-color-light-shade2);
+
+    /* dashboard card width */
+    --dashboard-card-width: min(95%, 55rem);
 }

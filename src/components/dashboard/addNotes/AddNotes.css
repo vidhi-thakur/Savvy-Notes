@@ -1,8 +1,9 @@
 .addNotes {
-  width: min(95%, 55rem);
+  width: var(--dashboard-card-width);
   background-color: var(--basic-bg);
   border-radius: var(--default-border);
   padding: var(--default-spacing);
+  box-shadow: var(--default-shadow);
 }
 
 .input {
@@ -45,13 +46,17 @@
 }
 
 .addNotes-bottomIcons {
-  font-size: 1.5rem;
+  font-size: var(--md-font-s);
 }
 
 .addNotes-bottomIcons {
   display: flex;
   align-items: center;
   gap: var(--default-spacing);
+}
+
+.addNotes-bottomIcons > svg {
+  opacity: var(--opacity-default);
 }
 
 .addNotes-bottomIcons > svg:hover {
