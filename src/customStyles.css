@@ -1,5 +1,6 @@
 :root {
     --opacity-default: 0.9;
+    --opacity-reduced: 0.7;
 
     /* home page heading variables */
     --homePage-heading: 5rem;
