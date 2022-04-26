@@ -56,10 +56,10 @@
 }
 
 .addNotes-bottomIcons > svg {
-  opacity: var(--opacity-default);
+  opacity: var(--opacity-reduced);
 }
 
 .addNotes-bottomIcons > svg:hover {
-  color: var(--primary-color);
+  opacity: var(--opacity-default);
   cursor: pointer;
 }
