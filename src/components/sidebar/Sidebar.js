@@ -6,8 +6,8 @@ import { sidebarMenu } from 'static/sidebar/sidebarMenu'
 import { NavLink } from 'react-router-dom'
 
 function Sidebar({ children, isSidearVisible }) {
-  const getActiveStyle = ({ isAvtive }) => ({
-    fontWeight: isAvtive ? 700 : 400
+  const getActiveStyle = ({ isActive }) => ({
+    fontWeight: isActive ? 700 : 400,
   })
   return (
     <div className="sidebar-HOC">
