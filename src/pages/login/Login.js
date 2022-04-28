@@ -1,9 +1,11 @@
+import { useAuth } from 'context/authContext';
 import React from 'react';
 import { Link } from 'react-router-dom'
 // css 
 import './Login.css'
 
 function Login() {
+    const { updateLoginState } = useAuth();
     return (
         <main className="login-page">
             <div className="form-container">
@@ -25,7 +27,7 @@ function Login() {
                         </div>
                         <div>Forgot password?</div>
                     </div>
-                    <button type="submit" className="btn btn-primary-contained btn-extra">login</button>
+                    <button onClick={() => updateLoginState()} type="submit" className="btn btn-primary-contained btn-extra">login</button>
                 </form>
                 <Link to="/signup" className="form-link">New user? Register here <i className='fas fa-angle-right'></i></Link>
             </div>

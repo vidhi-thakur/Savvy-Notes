@@ -6,21 +6,17 @@ import { Route, Routes } from 'react-router-dom'
 
 //local components
 import { Dashboard, Home, Login } from 'pages/pagesGlobalExport';
-import { Navbar, Sidebar } from 'components/componentExport';
-
-// helpers
-import RequiresAuth from 'helpers/auth/RequiresAuth';
+import { Navbar, RequiresAuth, Sidebar } from 'components/componentExport';
 
 function App() {
   const [isSidearVisible, setIsSidearVisible] = useState(false)
-  const [isUserLoggenIn, setIsUserLoggenIn] = useState(true)
   return (
     <div className="App">
       <Navbar setIsSidearVisible={setIsSidearVisible} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={
-          <RequiresAuth login={isUserLoggenIn}>
+          <RequiresAuth>
             <Sidebar isSidearVisible={isSidearVisible}>
               <Dashboard />
             </Sidebar>
