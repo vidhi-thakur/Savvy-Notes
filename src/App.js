@@ -18,6 +18,7 @@ function App() {
         <Route path="/dashboard" element={<Sidebar isSidearVisible={isSidearVisible}>
           <Dashboard />
         </Sidebar>} />
+        <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
     </div>
   );
