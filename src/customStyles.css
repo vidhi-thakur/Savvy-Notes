@@ -1,5 +1,6 @@
 :root {
     --opacity-default: 0.9;
+    --opacity-reduced: 0.7;
 
     /* home page heading variables */
     --homePage-heading: 5rem;
@@ -16,7 +17,7 @@
 
     /* font size */
     --default-font-s: 1rem;
-    --md-font-s: 1.25rem;
+    --md-font-s: 1.5rem;
     --lg-font-s: 2rem;
     --sm-font-s: 0.5rem;
 
@@ -25,4 +26,14 @@
 
     /* border config */
     --basic-border: 1px solid var(--secondary-color-light-shade2);
+
+    /* dashboard card width */
+    --dashboard-card-width: min(95%, 55rem);
 }
+
+.ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
