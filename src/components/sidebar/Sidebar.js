@@ -12,13 +12,15 @@ function Sidebar({ children, isSidearVisible }) {
   return (
     <div className="sidebar-HOC">
       <aside className={`sidebar ${!isSidearVisible ? 'sidebar-inactive' : 'sidebar-active'}`}>
-        {sidebarMenu.map(({ name, icon, link }) => <NavLink style={getActiveStyle} to={link}>
-          <MenuItem
-            key={name}
-            name={name}
-            icon={icon}
-          />
-        </NavLink>)}
+        <div className='sidebar-container'>
+          {sidebarMenu.map(({ name, icon, link }) => <NavLink style={getActiveStyle} to={link}>
+            <MenuItem
+              key={name}
+              name={name}
+              icon={icon}
+            />
+          </NavLink>)}
+        </div>
       </aside>
       <div className='sidebar-RHS'>
         {children}
