@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 // css 
 import './Login.css';
 // context
@@ -9,6 +9,8 @@ function Login() {
     const { updateLoginState } = useAuth();
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate()
+    const location = useLocation()
     const updateUserName = event => {
         setUserName(event.target.value)
     }
@@ -19,6 +21,7 @@ function Login() {
         e.preventDefault()
         if(userName !== '' && password !== '') {
             updateLoginState()
+            navigate(location?.state?.from?.pathname)
         }
     }
     return (
