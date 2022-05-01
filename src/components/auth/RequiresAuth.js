@@ -6,6 +6,8 @@ import { useAuth } from 'context/authContext'
 function RequiresAuth({ children }) {
     const { isUserLoggenIn } = useAuth()
 
+    alert(isUserLoggenIn)
+
     return isUserLoggenIn ? children : <Navigate to="/login" replace />
 }
 

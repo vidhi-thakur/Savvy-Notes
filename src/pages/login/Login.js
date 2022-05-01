@@ -1,11 +1,26 @@
-import { useAuth } from 'context/authContext';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 // css 
-import './Login.css'
+import './Login.css';
+// context
+import { useAuth } from 'context/authContext';
 
 function Login() {
     const { updateLoginState } = useAuth();
+    const [userName, setUserName] = useState('')
+    const [password, setPassword] = useState('')
+    const updateUserName = event => {
+        setUserName(event.target.value)
+    }
+    const updatePassword = event => {
+        setPassword(event.target.value)
+    }
+    const loginUser = (e) => {
+        e.preventDefault()
+        if(userName !== '' && password !== '') {
+            updateLoginState()
+        }
+    }
     return (
         <main className="login-page">
             <div className="form-container">
@@ -13,11 +28,11 @@ function Login() {
                 <form className="form">
                     <div className="mb-1 input-container">
                         <label for="name">Enter name </label>
-                        <input required className="input" id="name" name="name" type="text" placeholder="e.g., Oliver" />
+                        <input onChange={event => updateUserName(event)} required className="input" id="name" name="name" type="text" placeholder="e.g., Oliver" />
                     </div>
                     <div className="mb-1 input-container">
                         <label for="password">Enter password </label>
-                        <input required className="input" id="password" name="password" type="password" placeholder="e.g., Oliver123" />
+                        <input onChange={event => updatePassword(event)} required className="input" id="password" name="password" type="password" placeholder="e.g., Oliver123" />
                     </div>
                     <div className="form-extrafeild">
                         <div className="mb-1 checkbox input-container ">
@@ -27,7 +42,7 @@ function Login() {
                         </div>
                         <div>Forgot password?</div>
                     </div>
-                    <button onClick={() => updateLoginState()} type="submit" className="btn btn-primary-contained btn-extra">login</button>
+                    <button onClick={loginUser} type="submit" className="btn btn-primary-contained btn-extra">login</button>
                 </form>
                 <Link to="/signup" className="form-link">New user? Register here <i className='fas fa-angle-right'></i></Link>
             </div>
