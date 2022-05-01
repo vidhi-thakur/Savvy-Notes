@@ -5,8 +5,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 //local components
-import { Dashboard, Home } from 'pages/pagesGlobalExport';
-import { Navbar, Sidebar } from 'components/componentExport';
+import { Dashboard, Home, Login } from 'pages/pagesGlobalExport';
+import { Navbar, RequiresAuth, Sidebar } from 'components/componentExport';
 
 function App() {
   const [isSidearVisible, setIsSidearVisible] = useState(false)
@@ -15,9 +15,15 @@ function App() {
       <Navbar setIsSidearVisible={setIsSidearVisible} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Sidebar isSidearVisible={isSidearVisible}>
-          <Dashboard />
-        </Sidebar>} />
+        <Route path="/dashboard" element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Dashboard />
+            </Sidebar>
+          </RequiresAuth>
+        } />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
     </div>
   );
