@@ -5,7 +5,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 //local components
-import { Dashboard, Home, Login } from 'pages/pagesGlobalExport';
+import { Dashboard, Home, Label, Login } from 'pages/pagesGlobalExport';
 import { Navbar, RequiresAuth, Sidebar } from 'components/componentExport';
 
 function App() {
@@ -22,8 +22,15 @@ function App() {
             </Sidebar>
           </RequiresAuth>
         } />
+        <Route path="/label" element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Label />
+            </Sidebar>
+          </RequiresAuth>
+        } />
         <Route path="/login" element={<Login />} />
-        <Route path="*" element={<h1>Page not found</h1>} />
+        <Route path="*" element={<h1 style={{ margin: "5rem auto", textAlign: "center" }}>Page not found</h1>} />
       </Routes>
     </div>
   );

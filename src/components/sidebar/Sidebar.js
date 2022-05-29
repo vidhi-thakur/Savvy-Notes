@@ -13,7 +13,7 @@ function Sidebar({ children, isSidearVisible }) {
     <div className="sidebar-HOC">
       <aside className={`sidebar ${!isSidearVisible ? 'sidebar-inactive' : 'sidebar-active'}`}>
         <div className='sidebar-container'>
-          {sidebarMenu.map(({ name, icon, link }) => <NavLink style={getActiveStyle} to={link}>
+          {sidebarMenu.map(({ name, icon, link }) => <NavLink key={name} style={getActiveStyle} to={link}>
             <MenuItem
               key={name}
               name={name}

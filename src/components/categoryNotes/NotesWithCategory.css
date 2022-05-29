@@ -1,0 +1,12 @@
+.notesWithCategory-header {
+  width: var(--maincontent-width);
+  margin: var(--default-spacing) auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: var(--font-w-02);
+}
+
+.notesWithCategory-editIcon {
+}
