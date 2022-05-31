@@ -1,39 +1,55 @@
 :root {
-    --opacity-default: 0.9;
-    --opacity-reduced: 0.7;
+  --opacity-default: 0.9;
+  --opacity-reduced: 0.7;
 
-    /* home page heading variables */
-    --homePage-heading: 5rem;
-    --homePage-heading-mv: 3rem;
+  /* home page heading variables */
+  --homePage-heading: 5rem;
+  --homePage-heading-mv: 3rem;
 
-    /* home page description variables */
-    --homePage-description: 1.5rem;
-    --homePage-description-mv: 1.2rem;
+  /* home page description variables */
+  --homePage-description: 1.5rem;
+  --homePage-description-mv: 1.2rem;
 
-    /* font weights */
-    --font-w-01: 400;
-    --font-w-02: 500;
-    --font-w-03: 700;
+  /* font weights */
+  --font-w-01: 400;
+  --font-w-02: 500;
+  --font-w-03: 700;
 
-    /* font size */
-    --default-font-s: 1rem;
-    --md-font-s: 1.5rem;
-    --lg-font-s: 2rem;
-    --sm-font-s: 0.5rem;
+  /* font size */
+  --default-font-s: 1rem;
+  --md-font-s: 1.5rem;
+  --lg-font-s: 2rem;
+  --sm-font-s: 0.5rem;
 
-    /* spacing */
-    --xxl-spacing: 5rem;
+  /* spacing */
+  --xxl-spacing: 5rem;
 
-    /* border config */
-    --basic-border: 1px solid var(--secondary-color-light-shade2);
+  /* border config */
+  --basic-border: 1px solid var(--secondary-color-light-shade2);
 
-    /* dashboard card width */
-    --dashboard-card-width: min(95%, 55rem);
+  /* dashboard card width */
+  --maincontent-width: min(95%, 55rem);
 }
 
 .ellipsis {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.generalNotes-mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--default-spacing);
+}
+
+.mb-default {
+  margin-bottom: var(--default-spacing);
+}
+
+.cp {
+  cursor: pointer;
+}

@@ -1,5 +1,5 @@
 .addNotes {
-  width: var(--dashboard-card-width);
+  width: var(--maincontent-width);
   background-color: var(--basic-bg);
   border-radius: var(--default-border);
   padding: var(--default-spacing);
