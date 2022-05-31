@@ -1,7 +1,6 @@
 import React from 'react'
 import { LabelCard, NotesWithCategory } from 'components/componentExport'
 import { FiEdit } from 'react-icons/fi'
-import { DashboardCard } from 'components/dashboard/dashboardExports'
 
 const dashboardCardContent = [
     {
