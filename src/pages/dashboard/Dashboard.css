@@ -1,8 +1,3 @@
 .dashboard-mainContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: var(--default-spacing);
-    margin-top: var(--default-spacing);
+  margin: var(--default-spacing) 0;
 }

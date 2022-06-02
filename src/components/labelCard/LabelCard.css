@@ -1,4 +1,4 @@
-.dashboardCard {
+.labelCard {
   display: flex;
   flex-direction: column;
   gap: var(--default-spacing);
@@ -11,34 +11,47 @@
   opacity: var(--opacity-default);
 }
 
-.dashboardCard-header {
+.labelCard-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.dashboardCard-header > svg, .dashboardCard-pin > svg {
+.labelCard-header > svg,
+.labelCard-pin > svg {
   font-size: var(--md-font-s);
   cursor: pointer;
   opacity: var(--opacity-default);
 }
 
-.dashboardCard-title {
+.labelCard-title {
   font-weight: var(--font-w-02);
 }
 
-.dashboardCard-bottomStrip {
+.labelCard-bottomStrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labelCard-bottomIcon {
   display: flex;
   justify-content: flex-end;
   gap: var(--default-spacing);
   font-size: var(--md-font-s);
 }
 
-.dashboardCard-bottomStrip > svg {
+.labelCard-bottomIcon > svg {
   opacity: var(--opacity-reduced);
 }
 
-.dashboardCard-bottomStrip > svg:hover {
+.labelCard-bottomIcon > svg:hover {
   cursor: pointer;
   opacity: var(--opacity-default);
+}
+
+.labelCard-labelName {
+  padding: var(--xxs-spacing) var(--xs-spacing);
+  background-color: var(--secondary-color-light-shade3);
+  border-radius: var(--default-border);
 }
