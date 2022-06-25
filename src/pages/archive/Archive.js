@@ -1,6 +1,6 @@
-import React from 'react'
 import { NotesCard, NotesWithCategory } from 'components/componentExport'
-import { FiEdit } from 'react-icons/fi'
+import React from 'react'
+import "./Archive.css"
 
 const dashboardCardContent = [
     {
@@ -13,16 +13,15 @@ const dashboardCardContent = [
     }
 ]
 
-function Label() {
+function Archive() {
 
-    const notes1 = dashboardCardContent.map((note, i) => <NotesCard labelName="Label 1" key={i} {...note} />)
-    const notes2 = dashboardCardContent.map((note, i) => <NotesCard labelName="Label 2" key={i} {...note} />)
+    const notes = dashboardCardContent.map((note, i) => <NotesCard key={i} {...note} />)
+
     return (
-        <div className='generalNotes-mainContent mb-default'>
-            <NotesWithCategory heading="Label 1" icon={<FiEdit />} notes={notes1} />
-            <NotesWithCategory heading="Label 2" icon={<FiEdit />} notes={notes2} />
+        <div>
+            <NotesWithCategory heading="Archive" notes={notes} />
         </div>
     )
 }
 
-export { Label }
+export { Archive }

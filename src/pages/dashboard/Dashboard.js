@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './Dashboard.css'
-import { AddNotes, DashboardCard } from 'components/dashboard/dashboardExports'
+import { AddNotes } from 'components/dashboard/dashboardExports'
 import { getAllNotesData } from 'helpers/helperExport'
+import { NotesCard } from 'components/componentExport'
 
 function Dashboard() {
     const [title, setTitle] = useState("")
@@ -19,7 +20,7 @@ function Dashboard() {
         <div>
             <div className='generalNotes-mainContent dashboard-mainContent'>
                 <AddNotes title={title} description={description} updateTitle={updateTitle} updateDesc={updateDesc} />
-                {getAllNotesData()?.map((card, i) => <DashboardCard key={i} {...card} />)}
+                {getAllNotesData()?.map((card, i) => <NotesCard key={i} {...card} />)}
             </div>
         </div>
     )

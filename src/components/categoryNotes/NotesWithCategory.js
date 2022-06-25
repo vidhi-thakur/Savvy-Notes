@@ -15,4 +15,4 @@ function NotesWithCategory({ heading, icon, notes }) {
     )
 }
 
-export { NotesWithCategory }
+export { NotesWithCategory } 
