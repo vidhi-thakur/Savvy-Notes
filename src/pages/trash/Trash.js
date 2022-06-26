@@ -1,4 +1,5 @@
 import { NotesCard, NotesWithCategory } from 'components/componentExport'
+import { getDeletedNotes } from 'helpers/helperExport'
 import React from 'react'
 import "./Trash.css"
 
@@ -15,7 +16,7 @@ const dashboardCardContent = [
 
 function Trash() {
 
-    const notes = dashboardCardContent.map((note, i) => <NotesCard key={i} {...note} />)
+    const notes = getDeletedNotes()?.map((note, i) => <NotesCard key={i} {...note} />)
 
     return (
         <div>

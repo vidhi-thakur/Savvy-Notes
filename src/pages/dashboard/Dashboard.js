@@ -7,7 +7,6 @@ import { NotesCard } from 'components/componentExport'
 function Dashboard() {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-
     const updateTitle = input => {
         setTitle(input)
     }
@@ -20,7 +19,7 @@ function Dashboard() {
         <div>
             <div className='generalNotes-mainContent dashboard-mainContent'>
                 <AddNotes title={title} description={description} updateTitle={updateTitle} updateDesc={updateDesc} />
-                {getAllNotesData()?.map((card, i) => <NotesCard key={i} {...card} />)}
+                {getAllNotesData()?.filter(notes => notes.isDeleted !== true)?.map((card, i) => <NotesCard key={i} {...card} />)}
             </div>
         </div>
     )
