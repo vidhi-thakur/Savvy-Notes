@@ -6,7 +6,7 @@ import { CgTag, CgColorBucket } from 'react-icons/cg';
 import { BiArchiveIn } from 'react-icons/bi';
 import { FiTrash2 } from 'react-icons/fi';
 // helper
-import { deleteNote } from 'helpers/helperExport';
+import { archiveNotes, deleteNote } from 'helpers/helperExport';
 
 function NotesCard({ heading, content, labelName, ...props }) {
     const [isCardPinned, setIsCardPinned] = useState(false)
@@ -29,7 +29,7 @@ function NotesCard({ heading, content, labelName, ...props }) {
                 <div className='notesCard-bottomIcon'>
                     <CgColorBucket />
                     <CgTag />
-                    <BiArchiveIn />
+                    <BiArchiveIn onClick={() => archiveNotes(props.id)} />
                     {!props.isDeleted && <FiTrash2 onClick={() => deleteNote(props.id)} />}
                 </div>
             </footer>

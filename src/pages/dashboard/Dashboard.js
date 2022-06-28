@@ -19,7 +19,7 @@ function Dashboard() {
         <div>
             <div className='generalNotes-mainContent dashboard-mainContent'>
                 <AddNotes title={title} description={description} updateTitle={updateTitle} updateDesc={updateDesc} />
-                {getAllNotesData()?.filter(notes => notes.isDeleted !== true)?.map((card, i) => <NotesCard key={i} {...card} />)}
+                {getAllNotesData()?.filter(note => !note.isDeleted && !note.isArchived)?.map((card, i) => <NotesCard key={i} {...card} />)}
             </div>
         </div>
     )

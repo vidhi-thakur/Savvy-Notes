@@ -15,7 +15,7 @@ const dashboardCardContent = [
 
 function Archive() {
 
-    const notes = dashboardCardContent.map((note, i) => <NotesCard key={i} {...note} />)
+    const notes = dashboardCardContent?.filter(note => note.isArchived)?.map((note, i) => <NotesCard key={i} {...note} />)
 
     return (
         <div>
