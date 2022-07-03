@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './AddNotes.css'
 import { CgTag, CgColorBucket } from 'react-icons/cg';
 import { addNotesToStorage } from 'helpers/addNotesToStorage/addNotesToStorage';
-import { getAllNotesData } from 'helpers/helperExport';
 
 function AddNotes({ title, description, updateTitle, updateDesc}) {
 

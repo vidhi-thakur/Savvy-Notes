@@ -1,6 +1,5 @@
 import React from 'react'
 import { NotesCard, NotesWithCategory } from 'components/componentExport'
-import { FiEdit } from 'react-icons/fi'
 
 const dashboardCardContent = [
     {
