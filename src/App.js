@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 //local components
 import { Archive, Dashboard, Home, Label, Login, Trash } from 'pages/pagesGlobalExport';
 import { Navbar, RequiresAuth, Sidebar } from 'components/componentExport';
+import PageNotFound from 'pages/pageNotFound/PageNotFound';
 
 function App() {
   const [isSidearVisible, setIsSidearVisible] = useState(false)
@@ -42,7 +43,7 @@ function App() {
               <Trash />
             </Sidebar>
           </RequiresAuth>} />
-        <Route path="*" element={<h1 style={{ margin: "5rem auto", textAlign: "center" }}>Page not found</h1>} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
