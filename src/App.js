@@ -5,9 +5,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 //local components
-import { Archive, Dashboard, Home, Label, Login, Trash } from 'pages/pagesGlobalExport';
+import { Archive, Dashboard, Home, Label, Login, PageNotFound, Trash } from 'pages/pagesGlobalExport';
 import { Navbar, RequiresAuth, Sidebar } from 'components/componentExport';
-import PageNotFound from 'pages/pageNotFound/PageNotFound';
 
 function App() {
   const [isSidearVisible, setIsSidearVisible] = useState(false)

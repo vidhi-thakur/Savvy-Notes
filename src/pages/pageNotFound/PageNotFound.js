@@ -1,5 +1,5 @@
 import React from 'react'
-import './PageNotFound.css'
+import 'pages/pageNotFound/PageNotFound.css'
 
 function PageNotFound() {
     return (
@@ -7,4 +7,4 @@ function PageNotFound() {
     )
 }
 
-export default PageNotFound
+export { PageNotFound }
