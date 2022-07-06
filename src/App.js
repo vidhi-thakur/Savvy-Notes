@@ -5,7 +5,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 //local components
-import { Dashboard, Home, Label, Login } from 'pages/pagesGlobalExport';
+import { Archive, Dashboard, Home, Label, Login, Trash } from 'pages/pagesGlobalExport';
 import { Navbar, RequiresAuth, Sidebar } from 'components/componentExport';
 
 function App() {
@@ -30,6 +30,18 @@ function App() {
           </RequiresAuth>
         } />
         <Route path="/login" element={<Login />} />
+        <Route path='/archive' element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Archive />
+            </Sidebar>
+          </RequiresAuth>} />
+        <Route path='/trash' element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Trash />
+            </Sidebar>
+          </RequiresAuth>} />
         <Route path="*" element={<h1 style={{ margin: "5rem auto", textAlign: "center" }}>Page not found</h1>} />
       </Routes>
     </div>
