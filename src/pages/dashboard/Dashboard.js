@@ -1,44 +1,25 @@
-import { AddNotes, DashboardCard } from 'components/dashboard/dashboardExports'
-import React from 'react'
+import React, { useState } from 'react'
 import './Dashboard.css'
-
-const dashboardCardContent = [
-    {
-        heading: "Title of the note",
-        content: "body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card"
-    },
-    {
-        heading: "Title of the note",
-        content: "body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card"
-    },
-    {
-        heading: "Title of the note",
-        content: "body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card"
-    },
-    {
-        heading: "Title of the note",
-        content: "body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card"
-    },
-    {
-        heading: "Title of the note",
-        content: "body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card"
-    },
-    {
-        heading: "Title of the note",
-        content: "body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card"
-    },
-    {
-        heading: "Title of the note",
-        content: "body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card body of the card"
-    },
-]
+import { AddNotes } from 'components/dashboard/dashboardExports'
+import { getAllNotesData } from 'helpers/helperExport'
+import { NotesCard } from 'components/componentExport'
 
 function Dashboard() {
+    const [title, setTitle] = useState("")
+    const [description, setDescription] = useState("")
+    const updateTitle = input => {
+        setTitle(input)
+    }
+
+    const updateDesc = input => {
+        setDescription(input)
+    }
+
     return (
         <div>
             <div className='generalNotes-mainContent dashboard-mainContent'>
-                <AddNotes />
-                {dashboardCardContent.map((card, i) => <DashboardCard key={i} {...card} />)}
+                <AddNotes title={title} description={description} updateTitle={updateTitle} updateDesc={updateDesc} />
+                {getAllNotesData()?.filter(note => !note.isDeleted && !note.isArchived)?.map((card, i) => <NotesCard key={i} {...card} />)}
             </div>
         </div>
     )
