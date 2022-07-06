@@ -1,4 +1,4 @@
-.notesCard {
+.labelCard {
   display: flex;
   flex-direction: column;
   gap: var(--default-spacing);
@@ -11,46 +11,46 @@
   opacity: var(--opacity-default);
 }
 
-.notesCard-header {
+.labelCard-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.notesCard-header > svg,
-.notesCard-pin > svg {
+.labelCard-header > svg,
+.labelCard-pin > svg {
   font-size: var(--md-font-s);
   cursor: pointer;
   opacity: var(--opacity-default);
 }
 
-.notesCard-title {
+.labelCard-title {
   font-weight: var(--font-w-02);
 }
 
-.notesCard-bottomStrip {
+.labelCard-bottomStrip {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.notesCard-bottomIcon {
+.labelCard-bottomIcon {
   display: flex;
   justify-content: flex-end;
   gap: var(--default-spacing);
   font-size: var(--md-font-s);
 }
 
-.notesCard-bottomIcon > svg {
+.labelCard-bottomIcon > svg {
   opacity: var(--opacity-reduced);
 }
 
-.notesCard-bottomIcon > svg:hover {
+.labelCard-bottomIcon > svg:hover {
   cursor: pointer;
   opacity: var(--opacity-default);
 }
 
-.notesCard-labelName {
+.labelCard-labelName {
   padding: var(--xxs-spacing) var(--xs-spacing);
   background-color: var(--secondary-color-light-shade3);
   border-radius: var(--default-border);

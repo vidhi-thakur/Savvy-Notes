@@ -19,8 +19,8 @@ function Login() {
     }
     const loginUser = (e) => {
         e.preventDefault()
-        if (userName !== '' && password !== '') {
-            updateLoginState({ name: userName, password })
+        if(userName !== '' && password !== '') {
+            updateLoginState()
             navigate(location?.state?.from?.pathname)
         }
     }
