@@ -55,3 +55,11 @@
   background-color: var(--secondary-color-light-shade3);
   border-radius: var(--default-border);
 }
+
+.notesCard-edit {
+  font-size: var(--default-font-s);
+  font-weight: var(--font-w-01);
+  margin-left: var(--default-spacing);
+  /* display: flex;
+  align-items: center; */
+}

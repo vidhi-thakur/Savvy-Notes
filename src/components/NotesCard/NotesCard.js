@@ -15,7 +15,10 @@ function NotesCard({ heading, content, labelName, ...props }) {
         <div className='notesCard'>
             <header className='notesCard-header'>
                 <h3 className='notesCard-title'>
-                    {heading}
+                    <span>{heading}</span>
+                    <span className='notesCard-edit'>
+                        <span>.</span> <span>edit</span>
+                    </span>
                 </h3>
                 <div className='notesCard-pin' onClick={() => setIsCardPinned(!isCardPinned)}>
                     {isCardPinned ? <BsPinAngleFill /> : <BsPinAngle />}
