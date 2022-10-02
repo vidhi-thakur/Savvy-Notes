@@ -21,12 +21,11 @@ function Login() {
     const updatePassword = event => {
         setPassword(event.target.value)
     }
-    const loginUser = (e) => {
+    const loginUser = (e, type) => {
         e.preventDefault()
-        if (userName !== '' && password !== '') {
+        if ((userName !== '' && password !== '') || type === 'guest') {
             updateLoginState()
             navigate(location?.state?.from?.pathname)
-            
         }
     }
     return (
@@ -44,14 +43,15 @@ function Login() {
                         <input onChange={event => updatePassword(event)} required className="input" id="password" name="password" type="password" placeholder="e.g., Oliver123" />
                     </div>
                     <div className="form-extrafeild">
-                        <div className="mb-1 checkbox input-container ">
+                        <div className="checkbox input-container ">
                             <input id="checkbox-input" name="checkbox-input" type="checkbox" /><label
-                                for="checkbox-input">Remember
-                                me</label>
+                                for="checkbox-input">Remember me</label>
                         </div>
                         <div>Forgot password?</div>
                     </div>
                     <button onClick={loginUser} type="submit" className="btn btn-primary-contained btn-extra">login</button>
+                    <div style={{ textAlign: "center" }}>OR</div>
+                    <button onClick={(e) => loginUser(e, 'guest')} type="submit" className="btn btn-primary-contained btn-extra">Login as guest user</button>
                 </form>
                 <Link to="/signup" className="form-link">New user? Register here <i className='fas fa-angle-right'></i></Link>
             </div>
