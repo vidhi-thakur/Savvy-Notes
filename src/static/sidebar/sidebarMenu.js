@@ -1,7 +1,6 @@
-import { CgTag } from 'react-icons/cg';
+import { CgTag, CgProfile } from 'react-icons/cg';
 import { BiArchiveIn } from 'react-icons/bi';
 import { FiTrash2, FiHome } from 'react-icons/fi';
-import { CgProfile } from 'react-icons/cg';
 
 export const sidebarMenu = [
     {

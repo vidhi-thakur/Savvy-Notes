@@ -1,3 +1,5 @@
 export { Navbar } from 'components/navbar/Navbar'
 export { Sidebar } from 'components/sidebar/Sidebar'
 export { RequiresAuth } from 'components/auth/RequiresAuth'
+export { NotesWithCategory } from 'components/categoryNotes/NotesWithCategory'
+export { NotesCard } from 'components/NotesCard/NotesCard'
