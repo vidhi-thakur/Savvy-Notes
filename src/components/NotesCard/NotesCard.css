@@ -1,0 +1,57 @@
+.notesCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-spacing);
+  width: var(--maincontent-width);
+  height: auto;
+  background-color: var(--basic-bg);
+  padding: var(--default-spacing);
+  border-radius: var(--default-border);
+  border: var(--basic-border);
+  opacity: var(--opacity-default);
+}
+
+.notesCard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notesCard-header > svg,
+.notesCard-pin > svg {
+  font-size: var(--md-font-s);
+  cursor: pointer;
+  opacity: var(--opacity-default);
+}
+
+.notesCard-title {
+  font-weight: var(--font-w-02);
+}
+
+.notesCard-bottomStrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notesCard-bottomIcon {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--default-spacing);
+  font-size: var(--md-font-s);
+}
+
+.notesCard-bottomIcon > svg {
+  opacity: var(--opacity-reduced);
+}
+
+.notesCard-bottomIcon > svg:hover {
+  cursor: pointer;
+  opacity: var(--opacity-default);
+}
+
+.notesCard-labelName {
+  padding: var(--xxs-spacing) var(--xs-spacing);
+  background-color: var(--secondary-color-light-shade3);
+  border-radius: var(--default-border);
+}

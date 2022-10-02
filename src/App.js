@@ -5,8 +5,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
 //local components
-import { Dashboard, Home } from 'pages/pagesGlobalExport';
-import { Navbar, Sidebar } from 'components/componentExport';
+import { Archive, Dashboard, Home, Label, Login, PageNotFound, Trash } from 'pages/pagesGlobalExport';
+import { Navbar, RequiresAuth, Sidebar } from 'components/componentExport';
 
 function App() {
   const [isSidearVisible, setIsSidearVisible] = useState(false)
@@ -15,9 +15,34 @@ function App() {
       <Navbar setIsSidearVisible={setIsSidearVisible} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Sidebar isSidearVisible={isSidearVisible}>
-          <Dashboard />
-        </Sidebar>} />
+        <Route path="/dashboard" element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Dashboard />
+            </Sidebar>
+          </RequiresAuth>
+        } />
+        <Route path="/label" element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Label />
+            </Sidebar>
+          </RequiresAuth>
+        } />
+        <Route path="/login" element={<Login />} />
+        <Route path='/archive' element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Archive />
+            </Sidebar>
+          </RequiresAuth>} />
+        <Route path='/trash' element={
+          <RequiresAuth>
+            <Sidebar isSidearVisible={isSidearVisible}>
+              <Trash />
+            </Sidebar>
+          </RequiresAuth>} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );

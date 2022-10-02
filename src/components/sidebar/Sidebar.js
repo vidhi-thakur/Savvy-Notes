@@ -6,15 +6,21 @@ import { sidebarMenu } from 'static/sidebar/sidebarMenu'
 import { NavLink } from 'react-router-dom'
 
 function Sidebar({ children, isSidearVisible }) {
+  const getActiveStyle = ({ isActive }) => ({
+    fontWeight: isActive ? 700 : 400,
+  })
   return (
     <div className="sidebar-HOC">
       <aside className={`sidebar ${!isSidearVisible ? 'sidebar-inactive' : 'sidebar-active'}`}>
-        {sidebarMenu.map(({ name, icon, link }) => <MenuItem
-          key={name}
-          name={name}
-          icon={icon}
-          link={link}
-        />)}
+        <div className='sidebar-container'>
+          {sidebarMenu.map(({ name, icon, link }) => <NavLink key={name} style={getActiveStyle} to={link}>
+            <MenuItem
+              key={name}
+              name={name}
+              icon={icon}
+            />
+          </NavLink>)}
+        </div>
       </aside>
       <div className='sidebar-RHS'>
         {children}
@@ -23,18 +29,11 @@ function Sidebar({ children, isSidearVisible }) {
   )
 }
 
-const MenuItem = ({ name, icon, link }) => {
-  const getActiveStyle = ({ isAvtive }) => ({
-    fontWeight: isAvtive ? 700 : 400
-  })
+const MenuItem = ({ name, icon }) => {
   return (
     <div className='sidebar-menuItem'>
-      <NavLink style={getActiveStyle} to={link}>
-        <div>
-          <span>{icon}</span>
-          <span>{name}</span>
-        </div>
-      </NavLink>
+      <span>{icon}</span>
+      <span>{name}</span>
     </div>
   )
 }
