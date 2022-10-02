@@ -7,6 +7,10 @@ import { useAuth } from 'context/authContext';
 
 function Login() {
     const { updateLoginState } = useAuth();
+    const [error, setError] = useState({
+        userName: null,
+        password: null
+    })
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
@@ -19,9 +23,10 @@ function Login() {
     }
     const loginUser = (e) => {
         e.preventDefault()
-        if(userName !== '' && password !== '') {
+        if (userName !== '' && password !== '') {
             updateLoginState()
             navigate(location?.state?.from?.pathname)
+            
         }
     }
     return (
@@ -32,6 +37,7 @@ function Login() {
                     <div className="mb-1 input-container">
                         <label for="name">Enter name </label>
                         <input onChange={event => updateUserName(event)} required className="input" id="name" name="name" type="text" placeholder="e.g., Oliver" />
+                        {error.userName && <span className='login-error'>Enter your name</span>}
                     </div>
                     <div className="mb-1 input-container">
                         <label for="password">Enter password </label>
